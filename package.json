@@ -10,6 +10,7 @@
     "serve": "static -H \"{\\\"Cache-Control\\\": \\\"no-cache, must-revalidate\\\"}\""
   },
   "dependencies": {
+    "co": "~3.0.6"
   },
   "devDependencies": {
     "watchy": "~0.4.4",
