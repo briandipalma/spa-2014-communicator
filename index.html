@@ -10,10 +10,16 @@
 		<script src="node_modules/systemjs/dist/system.min.js"></script>
 
 		<script>
+			System.config({
+				map: {
+					"co": "node_modules/co/index"
+				}
+        	});
+
 			System
 				.import("src/index")
 				.then(function(module) {
-					module.loadData();
+					module.loadData2();
 				})
 				.catch(function(importError) {
 					console.error(importError);
