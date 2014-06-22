@@ -3,9 +3,12 @@ export function greet() {
 }
 
 export function loadData() {
-	get('/data/login-user-pass.json')
+	get('/data/login-user-pass1.json')
 		.then(function(response) {
 			console.log(response);
+		})
+		.catch(function(error) {
+			console.error(error);
 		});
 }
 
