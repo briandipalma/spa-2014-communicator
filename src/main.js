@@ -32,7 +32,17 @@ function loadDataPromise() {
 }
 
 function *loadDataGen() {
-	yield get('data/login-user-pass.json');
+	try {
+		yield get('data/login-user-pass.json');
+	} catch (loginError) {
+		return loginError;
+	}
+
+	return yield [
+		get('/data/contacts-user.json'),
+		get('/data/chat-messages.json'),
+		get('/data/recent-messages-user.json')
+	];
 }
 
 function get(url) {
