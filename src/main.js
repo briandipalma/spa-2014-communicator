@@ -1,3 +1,5 @@
+import co from 'co-promise';
+
 export function greet() {
     alert('Hello world');
 }

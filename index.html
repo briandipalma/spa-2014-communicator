@@ -10,6 +10,13 @@
 		<script src="node_modules/systemjs/dist/system.min.js"></script>
 
 		<script>
+			System.config({
+				map: {
+					"co": "node_modules/co/index",
+					"co-promise": "node_modules/co-promise/index"
+				}
+			});
+			
 			System.import('src/main')
 				.then(function(module) {
 					module.loadData();
