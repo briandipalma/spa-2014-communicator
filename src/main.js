@@ -3,7 +3,7 @@ export function greet() {
 }
 
 export function loadData() {
-	get('/data/login-user-pass1.json')
+	get('/data/login-user-pass.json')
 		.then((response) => {
 			return Promise.all([
 				get('/data/contacts-user.json'),
