@@ -5,6 +5,16 @@ export function greet() {
 }
 
 export function loadData() {
+	co(loadDataGen())
+		.catch((error) => {
+			console.error(error);
+		})
+		.then((response) => {
+			console.log(response);
+		});
+}
+
+function loadDataPromise() {
 	get('/data/login-user-pass.json')
 		.then((response) => {
 			return Promise.all([
@@ -19,6 +29,10 @@ export function loadData() {
 		.then((response) => {
 			console.log(response);
 		});
+}
+
+function *loadDataGen() {
+	yield get('data/login-user-pass.json');
 }
 
 function get(url) {
