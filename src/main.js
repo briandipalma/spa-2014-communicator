@@ -4,11 +4,18 @@ export function greet() {
 
 export function loadData() {
 	get('/data/login-user-pass1.json')
-		.then(function(response) {
-			console.log(response);
+		.then((response) => {
+			return Promise.all([
+				get('/data/contacts-user.json'),
+				get('/data/chat-messages.json'),
+				get('/data/recent-messages-user.json')
+			]);
 		})
-		.catch(function(error) {
+		.catch((error) => {
 			console.error(error);
+		})
+		.then((response) => {
+			console.log(response);
 		});
 }
 
