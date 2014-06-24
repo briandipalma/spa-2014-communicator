@@ -9,21 +9,7 @@
 		<script src="node_modules/es6-module-loader/dist/es6-module-loader.min.js"></script>
 		<script src="node_modules/systemjs/dist/system.min.js"></script>
 
-		<script>
-			System.config({
-				map: {
-					"co": "node_modules/co/index",
-					"co-promise": "node_modules/co-promise/index"
-				}
-			});
-			
-			System.import('src/main')
-				.then(function(module) {
-					module.loadData();
-				}).catch(function(error) {
-					console.error(error);
-				});
-		</script>
+		<script></script>
 	</head>
 	<body>
 	</body>
