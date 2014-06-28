@@ -252,4 +252,4 @@ To start
 	}
 	```
 
-Now we can take a look at Web Components.
+Now we can take a look at Web Components https://github.com/briandipalma/spa-2014-contacts-list
