@@ -251,3 +251,5 @@ To start
 		];
 	}
 	```
+
+Now we can take a look at Web Components.
