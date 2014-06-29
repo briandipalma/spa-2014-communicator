@@ -3,20 +3,22 @@
   "version": "0.0.0",
   "main": "out/index.js",
   "scripts": {
+    "serve": "server",
     "prepublish": "npm run build",
     "start": "npm run watch & npm run serve",
     "watch": "watchy -sw src -- npm run build",
     "build": "traceur --dir src/ out/ --modules=commonjs --sourcemap",
-    "serve": "static -H \"{\\\"Cache-Control\\\": \\\"no-cache, must-revalidate\\\"}\""
+    "serve-s": "static -H \"{\\\"Cache-Control\\\": \\\"no-cache, must-revalidate\\\"}\""
   },
   "dependencies": {
     "co": "~3.0.6"
   },
   "devDependencies": {
-    "watchy": "~0.4.4",
-    "traceur": "~0.0.43",
-    "systemjs": "~0.6.6",
+    "es6-module-loader": "~0.6.0",
     "node-static": "~0.7.3",
-    "es6-module-loader": "~0.6.0"
+    "server": "git://github.com/briandipalma/server",
+    "systemjs": "~0.6.6",
+    "traceur": "~0.0.43",
+    "watchy": "~0.4.4"
   }
 }
