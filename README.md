@@ -47,13 +47,13 @@ To start
 
 	, executed in the root package directory.
 	
-	The included server will serve the package at http://127.0.0.1:8080
+	The included server will serve the package at http://localhost:8080
 
 	You can use your own server if you wish - there is no need for special server logic for ES6 modules.
 
 3. Make a module that alerts "Hello World!"
 
-	Create `src/main.js` in your project. Inside it place,
+	Create `src/main.js` file in your project. Inside it place,
 
 	```javascript
 	export function greet() {
